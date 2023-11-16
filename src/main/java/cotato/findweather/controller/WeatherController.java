@@ -1,14 +1,20 @@
 package cotato.findweather.controller;
 
+import cotato.findweather.dto.response.WeatherResponseDTO;
+import cotato.findweather.service.WeatherService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequiredArgsConstructor
 public class WeatherController {
 
+    private final WeatherService weatherService;
+
     @GetMapping("/weather")
-    public String getWeather() {
+    public WeatherResponseDTO getWeather() {
         // TODO : 날씨 정보 가져와 일교차 계산하기
-        return "최고 온도는 $ta_max 이고 최저 온도는 $tm_min 입니다. 일교차는 $diff 입니다.";
+        return weatherService.getWeather();
     }
 }
