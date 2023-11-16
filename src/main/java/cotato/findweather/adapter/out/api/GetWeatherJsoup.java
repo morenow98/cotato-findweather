@@ -6,11 +6,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 
-@Component
+@Repository
 class GetWeatherJsoup implements GetWeatherPort {
 
     private final String BASE_URL = "https://www.weather.go.kr/w/obs-climate/land/past-obs/obs-by-day.do";
@@ -97,7 +97,7 @@ class GetWeatherJsoup implements GetWeatherPort {
             }
 
             return new Weather(averageTemperature, maximumTemperature,
-                    minimumTemperature, averageCloudCover,dailyPrecipitation);
+                    minimumTemperature, averageCloudCover, dailyPrecipitation);
 
         }
 
