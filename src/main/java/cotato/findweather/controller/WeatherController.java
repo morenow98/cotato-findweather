@@ -19,7 +19,7 @@ public class WeatherController {
                             .scheme("https")
                             .host("apihub.kma.go.kr")
                             .path("/api/typ01/url/kma_sfcdd.php")
-                            .queryParam("tm", "20150715")
+                            .queryParam("tm", "20231101")
                             .queryParam("stn", "0")
                             .queryParam("help", "1")
                             .queryParam("authKey", "PbPkF8c4Sraz5BfHOEq2Nw")
