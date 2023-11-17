@@ -9,5 +9,4 @@ public class FindweatherApplication {
     public static void main(String[] args) {
         SpringApplication.run(FindweatherApplication.class, args);
     }
-
 }
